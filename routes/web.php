@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/tasks', [App\Http\Controllers\TaskController::class, 'index'])->name('tasks');
+Route::post('/task', [App\Http\Controllers\TaskController::class, 'store'])->name('task');
+Route::delete('/task/{task}', [App\Http\Controllers\TaskController::class, 'destroy'])->name('/task/{task}');
